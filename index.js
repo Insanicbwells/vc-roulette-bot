@@ -32,7 +32,7 @@ client.once("ready", async () => {
 
     new SlashCommandBuilder()
       .setName("startroulette")
-      .setDescription("Automatically eliminate someone every 30 seconds")
+      .setDescription("Automatically eliminate someone every 3 seconds")
       .toJSON(),
 
     new SlashCommandBuilder()
