@@ -9,8 +9,8 @@ const {
 const TOKEN = process.env.TOKEN;
 const CLIENT_ID = process.env.CLIENT_ID;
 
-// Put YOUR Discord user ID here so the bot never kicks you
 const HOST_ID = "1262320890893438977";
+const ELIMINATION_TIME = 3000; // 3000 = 3 seconds
 
 const activeRoulettes = new Map();
 
@@ -131,7 +131,7 @@ client.on("interactionCreate", async interaction => {
     }
 
     await interaction.reply(
-      `🎲 Automatic roulette started with ${startingPlayers} players! Eliminating someone every 30 seconds.`
+      `🎲 Automatic roulette started with ${startingPlayers} players! Eliminating someone every 3 seconds.`
     );
 
     const interval = setInterval(async () => {
@@ -169,7 +169,7 @@ client.on("interactionCreate", async interaction => {
           "I couldn't eliminate someone. Check my Move Members permission."
         );
       }
-    }, 30000);
+    }, ELIMINATION_TIME);
 
     activeRoulettes.set(guildId, interval);
   }
