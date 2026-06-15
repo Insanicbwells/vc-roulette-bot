@@ -10,7 +10,7 @@ const TOKEN = process.env.TOKEN;
 const CLIENT_ID = process.env.CLIENT_ID;
 
 // Put YOUR Discord user ID here so the bot never kicks you
-const HOST_ID = "YOUR_DISCORD_USER_ID";
+const HOST_ID = "1262320890893438977";
 
 const activeRoulettes = new Map();
 
